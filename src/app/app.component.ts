@@ -18,4 +18,8 @@ export class AppComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  logout() {
+    this.auth.logout();
+  }
 }

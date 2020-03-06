@@ -13,6 +13,7 @@
       <div class="navbar-end">
         <a *ngIf="isAuthenticated" role="button" class="navbar-item" [routerLink]="['/perfiles']">Perfiles</a>
         <a *ngIf="isAuthenticated" role="button" class="navbar-item" [routerLink]="['/palabras']">Palabras</a>
+        <a *ngIf="isAuthenticated" role="button" class="navbar-item" (click)="logout()">Cerrar Sesi&#243;n</a>
       </div>
     </section>
   </nav>

@@ -34,6 +34,11 @@ export class AuthService {
     }
   }
 
+  logout() {
+    localStorage.removeItem('access_token');
+    window.location.replace('/');
+  }
+
   getAuthorizationToken() {
     const token = localStorage.getItem('access_token');
     try {
