@@ -1,0 +1,16 @@
+.palabrator-web {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.palabrator-content {
+  flex: 2 0;
+  padding: 2em;
+}
+
+.palabrator-footer {
+  flex: 1 0;
+  justify-self: flex-end;
+}

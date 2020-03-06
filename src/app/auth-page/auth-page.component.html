@@ -1,0 +1,14 @@
+<section [ngSwitch]="viewState" class="auth-page">
+  <app-signup-form *ngSwitchCase="'Signup'" (onSignup)="trySignup($event)"></app-signup-form>
+  <app-login-form *ngSwitchDefault (onLogin)="tryLogin($event)"></app-login-form>
+  <section class="buttons has-addons view-selector">
+    <button (click)="setView('Login')"
+      [ngClass]="{ button: true, 'is-dark': viewState === 'Login', 'is-active': viewState === 'Login' }">
+      Ya tengo una cuenta
+    </button>
+    <button (click)="setView('Signup')"
+      [ngClass]="{ button: true, 'is-dark': viewState === 'Signup' , 'is-active': viewState === 'Signup'}">
+      Crear una cuenta
+    </button>
+  </section>
+</section>

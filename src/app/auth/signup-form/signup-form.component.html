@@ -1,0 +1,63 @@
+<form class="box" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <section class="field">
+    <label for="nombre" class="label">
+      Nombre
+    </label>
+    <div class="control">
+      <input placeholder="Nombre" type="text"
+        [ngClass]="{'input': true, 'is-danger': (nombre.invalid && (nombre.dirty || nombre.touched)) }"
+        formControlName="nombre">
+    </div>
+  </section>
+  <section class="field">
+    <label for="apellidos" class="label">
+      Apellidos
+    </label>
+    <div class="control">
+      <input placeholder="Apellidos" type="text"
+        [ngClass]="{'input': true, 'is-danger': (apellidos.invalid && (apellidos.dirty || apellidos.touched)) }"
+        formControlName="apellidos">
+    </div>
+  </section>
+  <section class="field">
+    <label for="correo" class="label">
+      Correo Electr&#243;nico
+    </label>
+    <div class="control">
+      <input placeholder="Correo Electr&#243;nico" type="email"
+        [ngClass]="{'input': true, 'is-danger': (correo.invalid && (correo.dirty || correo.touched)) }"
+        formControlName="correo">
+    </div>
+  </section>
+  <section class="field">
+    <label for="usuario" class="label">
+      Usuario (apodo)
+    </label>
+    <div class="control">
+      <input placeholder="Usuario (apodo)" type="text"
+        [ngClass]="{'input': true, 'is-danger': (usuario.invalid && (usuario.dirty || usuario.touched)) }"
+        formControlName="usuario">
+    </div>
+  </section>
+  <section class="field">
+    <label for="contrasena" class="label">
+      Contrase&#241;a
+    </label>
+    <div class="control">
+      <input placeholder="Contrase&#241;a" type="password"
+        [ngClass]="{'input': true, 'is-danger': (contrasena.invalid && (contrasena.dirty || contrasena.touched)) }"
+        formControlName="contrasena">
+      <span [ngClass]="{ help: true, 'is-danger': (contrasena.invalid && (contrasena.dirty || contrasena.touched)) }">
+        La contrase&#241;a debe contener al menos 8 caracteres, una letra mayuscula y una letra minuscula
+      </span>
+    </div>
+  </section>
+  <section class="field is-grouped">
+    <div class="control">
+      <button type="submit" class="button is-link" [disabled]="signupForm.invalid">Registrarse</button>
+    </div>
+    <div class="control">
+      <button type="reset" class="button is-link">Cancelar</button>
+    </div>
+  </section>
+</form>
